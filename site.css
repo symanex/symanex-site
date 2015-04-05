@@ -43,7 +43,7 @@ html, body {
         linear-gradient(60deg, #060606 25%, transparent 25.5%, transparent 75%, #060606 75%, #060606) 0 0 / 80px 140px,
         linear-gradient(60deg, #060606 25%, transparent 25.5%, transparent 75%, #060606 75%, #060606) 40px 70px / 80px 140px,
         #556;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(PIE.htc);
 }
 
 #logo {
