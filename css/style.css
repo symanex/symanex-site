@@ -787,6 +787,21 @@
 			color: inherit;
 		}
 
+/* Imprint Link */
+
+        #imprintlink {
+                position: relative;
+                text-align: center;
+                font-size: 0.6em
+                padding: 1em 0em 1em 0em;
+                color: inherit;
+                opacity: .60;
+        }
+
+        #copyright a {
+                color: #3399cc;
+        }
+
 /* Extra */
 
 	#extra1 h2 {
