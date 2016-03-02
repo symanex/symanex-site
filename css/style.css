@@ -746,7 +746,7 @@
 /* Footer */
 
 	#footer {
-		padding: 6em 0 2em 0;
+		padding: 2em 0 2em 0;
 		text-align: center;
 		color: white;
 	}
@@ -791,15 +791,18 @@
 
         #imprintlink {
                 position: relative;
+                text-transform: uppercase;
                 text-align: center;
-                font-size: 0.6em
+                font-size: 1.5em;
+                font-weight: bold;
                 padding: 1em 0em 1em 0em;
                 color: inherit;
-                opacity: .60;
+                opacity: .30;
         }
 
-        #copyright a {
+        #imprintlink a {
                 color: #3399cc;
+                text-decoration: none;
         }
 
 /* Extra */
