@@ -791,18 +791,18 @@
 
         #imprintlink {
                 position: relative;
-                text-transform: uppercase;
                 text-align: center;
-                font-size: 1.5em;
-                font-weight: bold;
                 padding: 1em 0em 1em 0em;
                 color: inherit;
-                opacity: .30;
         }
 
         #imprintlink a {
-                color: #3399cc;
+                color: lightgray;
                 text-decoration: none;
+        }
+
+        #imprintlink a:hover {
+                color: inherit;
         }
 
 /* Extra */
