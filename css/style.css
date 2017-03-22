@@ -791,6 +791,7 @@
 
         #imprintlink {
                 position: relative;
+                text-transform: uppercase;
                 text-align: center;
                 padding: 1em 0em 1em 0em;
                 color: inherit;
