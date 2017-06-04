@@ -20,6 +20,6 @@ script:
   - docker tag symanex/symanex-site:$TRAVIS_BUILD_NUMBER 928205109583.dkr.ecr.eu-west-1.amazonaws.com/symanex-site:$TRAVIS_BUILD_NUMBER
   - docker images 928205109583.dkr.ecr.eu-west-1.amazonaws.com/symanex-site
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
-    $(aws ecr get-login)
+    eval $(aws ecr get-login)
     docker push 928205109583.dkr.ecr.eu-west-1.amazonaws.com/symanex-site:$TRAVIS_BUILD_NUMBER;
     fi
