@@ -1,0 +1,28 @@
+sudo: required
+
+language: html
+
+services:
+  - docker
+
+before_install:
+  - docker build -t symanex/symanex-site:$TRAVIS_BUILD_NUMBER .
+  - docker run -d -p 127.0.0.1:80:4567 symanex/symanex-site:$TRAVIS_BUILD_NUMBER
+  - docker ps -a
+
+script:
+  - curl 127.0.0.1:4567
+
+before_deploy:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+    $(aws ecr get-login --region eu-west-1)
+    docker tag symanex-site/symanex-site:$TRAVIS_BUILD_NUMBER 928205109583.dkr.ecr.eu-west-1.amazonaws.com/symanex-site:$TRAVIS_BUILD_NUMBER;
+    fi
+
+deploy:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+    docker push 928205109583.dkr.ecr.eu-west-1.amazonaws.com/symanex-site:$TRAVIS_BUILD_NUMBER:$TRAVIS_BUILD_NUMBER;
+    fi
+
+after_deploy:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
