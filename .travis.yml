@@ -13,16 +13,9 @@ before_install:
 script:
   - curl 127.0.0.1:4567
 
-before_deploy:
+after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
     $(aws ecr get-login --region eu-west-1)
     docker tag symanex-site/symanex-site:$TRAVIS_BUILD_NUMBER 928205109583.dkr.ecr.eu-west-1.amazonaws.com/symanex-site:$TRAVIS_BUILD_NUMBER;
-    fi
-
-deploy:
-  - if [ "$TRAVIS_BRANCH" == "master" ]; then
     docker push 928205109583.dkr.ecr.eu-west-1.amazonaws.com/symanex-site:$TRAVIS_BUILD_NUMBER:$TRAVIS_BUILD_NUMBER;
     fi
-
-after_deploy:
-  - if [ "$TRAVIS_BRANCH" == "master" ]; then
