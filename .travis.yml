@@ -15,7 +15,7 @@ script:
   - docker run -d -p 127.0.0.1:80:80 symanex/symanex-site:$TRAVIS_BUILD_NUMBER
   - docker ps -a
   - curl -sI http://127.0.0.1:80/symanex-site/ | grep "HTTP.*200.*OK"
-  - docker tag symanex-site/symanex-site:$TRAVIS_BUILD_NUMBER 928205109583.dkr.ecr.eu-west-1.amazonaws.com/symanex-site:$TRAVIS_BUILD_NUMBER
+  - docker tag symanex/symanex-site:$TRAVIS_BUILD_NUMBER 928205109583.dkr.ecr.eu-west-1.amazonaws.com/symanex-site:$TRAVIS_BUILD_NUMBER
   - docker images
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
     $(aws ecr get-login --region eu-west-1)
