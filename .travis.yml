@@ -23,4 +23,5 @@ script:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
     $(aws ecr get-login);
     docker push 928205109583.dkr.ecr.eu-west-1.amazonaws.com/symanex-site:$TRAVIS_BUILD_NUMBER;
+    docker push 928205109583.dkr.ecr.eu-west-1.amazonaws.com/symanex-site:latest;
     fi
