@@ -12,16 +12,16 @@ before_install:
   - aws --version
 
 script:
-  - docker build -t symanex/symanex-site:$TRAVIS_BUILD_NUMBER .
+  - docker build -t symanex/symanex-site:travis$TRAVIS_BUILD_NUMBER .
   - docker images symanex/symanex-site
-  - docker run -d -p 127.0.0.1:80:80 symanex/symanex-site:$TRAVIS_BUILD_NUMBER
+  - docker run -d -p 127.0.0.1:80:80 symanex/symanex-site:travis$TRAVIS_BUILD_NUMBER
   - docker ps -a
   - curl -sI http://127.0.0.1:80/symanex-site/ | grep "HTTP.*200.*OK"
-  - docker tag symanex/symanex-site:$TRAVIS_BUILD_NUMBER 928205109583.dkr.ecr.eu-west-1.amazonaws.com/symanex-site:$TRAVIS_BUILD_NUMBER
-  - docker tag symanex/symanex-site:$TRAVIS_BUILD_NUMBER 928205109583.dkr.ecr.eu-west-1.amazonaws.com/symanex-site:latest
+  - docker tag symanex/symanex-site:travis$TRAVIS_BUILD_NUMBER 928205109583.dkr.ecr.eu-west-1.amazonaws.com/symanex-site:travis$TRAVIS_BUILD_NUMBER
+  - docker tag symanex/symanex-site:travis$TRAVIS_BUILD_NUMBER 928205109583.dkr.ecr.eu-west-1.amazonaws.com/symanex-site:latest
   - docker images 928205109583.dkr.ecr.eu-west-1.amazonaws.com/symanex-site
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
     $(aws ecr get-login);
-    docker push 928205109583.dkr.ecr.eu-west-1.amazonaws.com/symanex-site:$TRAVIS_BUILD_NUMBER;
+    docker push 928205109583.dkr.ecr.eu-west-1.amazonaws.com/symanex-site:travis$TRAVIS_BUILD_NUMBER;
     docker push 928205109583.dkr.ecr.eu-west-1.amazonaws.com/symanex-site:latest;
     fi
