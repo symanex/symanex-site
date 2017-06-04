@@ -18,5 +18,6 @@ script:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
     $(aws ecr get-login --region eu-west-1)
     docker tag symanex-site/symanex-site:$TRAVIS_BUILD_NUMBER 928205109583.dkr.ecr.eu-west-1.amazonaws.com/symanex-site:$TRAVIS_BUILD_NUMBER;
+    docker images
     docker push 928205109583.dkr.ecr.eu-west-1.amazonaws.com/symanex-site:$TRAVIS_BUILD_NUMBER;
     fi
