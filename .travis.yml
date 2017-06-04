@@ -14,9 +14,9 @@ before_install:
 script:
   - docker pull 928205109583.dkr.ecr.eu-west-1.amazonaws.com/symanex-site:$TRAVIS_COMMIT
   - if [ $? != 0 ]; then
-    docker build -t symanex/symanex-site:$TRAVIS_COMMIT .
-    else
-    docker tag 928205109583.dkr.ecr.eu-west-1.amazonaws.com/symanex-site:$TRAVIS_COMMIT symanex/symanex-site:$TRAVIS_COMMIT
+    docker build -t symanex/symanex-site:$TRAVIS_COMMIT .;
+    else;
+    docker tag 928205109583.dkr.ecr.eu-west-1.amazonaws.com/symanex-site:$TRAVIS_COMMIT symanex/symanex-site:$TRAVIS_COMMIT;
     fi
   - docker images symanex/symanex-site
   - docker run -d -p 127.0.0.1:80:80 symanex/symanex-site:$TRAVIS_COMMIT
