@@ -8,6 +8,8 @@ services:
 before_install:
   - pip install --user awscli
   - export PATH=$PATH:$HOME/.local/bin
+  - docker version
+  - aws --version
 
 script:
   - docker build -t symanex/symanex-site:$TRAVIS_BUILD_NUMBER .
