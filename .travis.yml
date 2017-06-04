@@ -7,12 +7,11 @@ services:
 
 before_install:
   - docker build -t symanex/symanex-site:$TRAVIS_BUILD_NUMBER .
-  - docker run -d -p 127.0.0.1:80:4567 symanex/symanex-site:$TRAVIS_BUILD_NUMBER
+  - docker run -d -p 127.0.0.1:80:80 symanex/symanex-site:$TRAVIS_BUILD_NUMBER
   - docker ps -a
 
 script:
-  - sleep 15
-  - curl http://127.0.0.1:4567
+  - curl -sI http://127.0.0.1:80/symanex-site/ | grep "HTTP.*200.*OK"
 
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
