@@ -725,7 +725,10 @@
 				}
 
 				#nav > ul > li.active a {
-					color: white;
+                                        border-radius: 4px;
+                                        padding: 0.5em;
+                                        background-color: white;
+					color: #336699;
 				}
 
 				#nav > ul > li > ul {
