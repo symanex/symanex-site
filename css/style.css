@@ -693,6 +693,11 @@
 			color: inherit;
 		}
 
+        #logo img {
+            height: 22px;
+            margin-top: 19px;
+        }
+
 	#nav {
 		position: absolute;
 		top: 0;
