@@ -59,6 +59,11 @@
 			font-size: 1.4em;
 		}
 
+                p.big {
+                        font-size: 1.4em;
+                        font-weight: bold;
+                } 
+
 	h1, h2, h3, h4, h5, h6 {
 		color: inherit;
 		font-weight: 700;
@@ -105,6 +110,82 @@
 		text-align: center;
 	}
 
+        section.highlight {
+                padding: 1em;
+                background-color: #3399cc;
+                color: #ffffff;
+        }
+
+        section.highlight header h1,
+        section.highlight header h2,
+        section.highlight header h3,
+        section.highlight header h4,
+        section.highlight header h5 {
+                background-color: #ffffff;
+                color: #3399cc;
+                padding: 1em;
+                text-align: center;
+                letter-spacing: 0.1em;
+                margin-bottom: 0.5em;
+        }
+
+        section.highlight a {
+                color: #ffffff;
+        }
+
+        section.highlight a:hover {
+                background-color: #ffffff;
+                color: #3399cc;
+                text-decoration: none;
+        }
+
+        section.highlight p {
+                letter-spacing: 0.1em;
+        }
+
+        section.highlight p:last-child {
+                margin-bottom: 0 !important;
+        }
+
+        section.highlight p.highlight {
+                background-color: #ffffff;
+                color: #3399cc;
+                text-align: center;
+                padding: 1em;
+        }
+
+        section.highlight p.highlight a {
+                color: #3399cc;
+        }
+
+        section.highlight p.highlight a:hover {
+                background-color: #3399cc;
+                color: #ffffff;
+        }
+
+        section.highlight label {
+                font-size: 0.9em;
+        }
+
+        section.highlight form input {
+                color: #33393c;
+        }
+
+        section.highlight form input.button {
+                padding: 0.3em;
+                font-size: 1.1em;
+                letter-spacing: 0.1em;
+                color: white;
+                background-color: none;
+                border: 1px solid white;
+                width: 100%;
+        }
+
+        section.highlight form input.button:hover {
+                background-color: #ffffff;
+                color: #3399cc;
+        }
+
 	header.major {
 		padding-bottom: 3em;
 		text-align: center;
@@ -142,11 +223,11 @@
 		-o-appearance: none;
 		-ms-appearance: none;
 		appearance: none;
-		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=25)";
-		filter: alpha(opacity=25);
-		-moz-opacity: 0.25;
-                -khtml-opacity: 0.25;
-		opacity: 0.25;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+		filter: alpha(opacity=50);
+		-moz-opacity: 0.50;
+                -khtml-opacity: 0.50;
+		opacity: 0.50;
 		background: #ffffff;
 		border: solid 1px #3399cc;
 		color: inherit;
@@ -155,6 +236,7 @@
 		padding: 0.75em;
 		text-decoration: none;
 		width: 100%;
+                letter-spacing: 0.1em;
 	}
 
 		input[type="text"]:focus,
@@ -162,11 +244,11 @@
 		input[type="email"]:focus,
 		textarea:focus {
 			border-color: #3399cc;
-			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-			filter: alpha(opacity=50);
-			-moz-opacity: 0.5;
-			-khtml-opacity: 0.5;
-			opacity: 0.5;
+			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+			filter: alpha(opacity=75);
+			-moz-opacity: 0.75;
+			-khtml-opacity: 0.75;
+			opacity: 0.75;
 		}
 
 	input[type="text"],
