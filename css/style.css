@@ -110,6 +110,24 @@
 		text-align: center;
 	}
 
+        section.fineprint {
+            font-size: 0.9em;
+        }
+
+        section.emphasize {
+                border: 2px solid #555;
+                padding: 1em;
+        }
+
+        section.emphasize h1,
+        section.emphasize h2,
+        section.emphasize h3,
+        section.emphasize h4,
+        section.emphasize h5 {
+            letter-spacing: 0.1em;
+            text-align: center;
+        }
+
         section.highlight {
                 padding: 1em;
                 background-color: #3399cc;
@@ -143,7 +161,7 @@
                 letter-spacing: 0.1em;
         }
 
-        section.highlight p:last-child {
+        section.highlight p:last-child, section.emphasize p:last-child {
                 margin-bottom: 0 !important;
         }
 
