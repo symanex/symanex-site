@@ -139,7 +139,7 @@
                 text-decoration: none;
         }
 
-        section.highlight p {
+        section.highlight p, section.highlight ul li {
                 letter-spacing: 0.1em;
         }
 
