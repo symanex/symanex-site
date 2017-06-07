@@ -114,6 +114,26 @@
             font-size: 0.9em;
         }
 
+        section.showcase {
+                background-color: #eee;
+                padding: 1em;
+                border-radius: 8px;
+        }
+
+        section.showcase p:last-child {
+                margin-bottom: 0 !important;
+        }
+
+        section.showcase h1,
+        section.showcase h2,
+        section.showcase h3,
+        section.showcase h4,
+        section.showcase h5 {
+            letter-spacing: 0.1em;
+            text-align: center;
+            padding: 1em;
+        }
+
         section.emphasize {
                 border: 2px solid #555;
                 padding: 1em;
@@ -126,6 +146,14 @@
         section.emphasize h5 {
             letter-spacing: 0.1em;
             text-align: center;
+        }
+
+        section.emphasize p {
+            letter-spacing: 0.1em;
+        }
+
+        section.emphasize p:last-child {
+                margin-bottom: 0 !important;
         }
 
         section.highlight {
@@ -161,7 +189,7 @@
                 letter-spacing: 0.1em;
         }
 
-        section.highlight p:last-child, section.emphasize p:last-child {
+        section.highlight p:last-child {
                 margin-bottom: 0 !important;
         }
 
